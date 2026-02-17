@@ -1,4 +1,6 @@
-const baseURL = "http://localhost:3000";
+const baseURL = window.location.hostname === "localhost" 
+                ? "http://localhost:3000" 
+                : window.location.origin;
 let questions = [];
 let current = 0;
 let score = 0;
